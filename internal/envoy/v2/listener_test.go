@@ -374,6 +374,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						NormalizePath:             protobuf.Bool(true),
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -427,6 +430,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						RequestTimeout:            protobuf.Duration(10 * time.Second),
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -481,6 +487,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						NormalizePath:             protobuf.Bool(true),
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -534,6 +543,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
 						StreamIdleTimeout:         protobuf.Duration(90 * time.Second),
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -588,6 +600,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						NormalizePath:             protobuf.Bool(true),
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -640,6 +655,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						NormalizePath:             protobuf.Bool(true),
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},
@@ -693,6 +711,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 						PreserveExternalRequestId: true,
 						MergeSlashes:              true,
 						DrainTimeout:              protobuf.Duration(90 * time.Second),
+						Http2ProtocolOptions: &envoy_api_v2_core.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 					}),
 				},
 			},

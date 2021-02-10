@@ -82,9 +82,14 @@ func TestRouteRoute(t *testing.T) {
 					ClusterSpecifier: &envoy_api_v2_route.RouteAction_Cluster{
 						Cluster: "default/kuard/8080/da39a3ee5e",
 					},
-					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{{
-						UpgradeType: "websocket",
-					}},
+					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{
+						{
+							UpgradeType: "websocket",
+						},
+						{
+							UpgradeType: "CONNECT",
+						},
+					},
 				},
 			},
 		},
@@ -168,9 +173,14 @@ func TestRouteRoute(t *testing.T) {
 							TotalWeight: protobuf.UInt32(90),
 						},
 					},
-					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{{
-						UpgradeType: "websocket",
-					}},
+					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{
+						{
+							UpgradeType: "websocket",
+						},
+						{
+							UpgradeType: "CONNECT",
+						},
+					},
 				},
 			},
 		},
@@ -241,9 +251,14 @@ func TestRouteRoute(t *testing.T) {
 							TotalWeight: protobuf.UInt32(1),
 						},
 					},
-					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{{
-						UpgradeType: "websocket",
-					}},
+					UpgradeConfigs: []*envoy_api_v2_route.RouteAction_UpgradeConfig{
+						{
+							UpgradeType: "websocket",
+						},
+						{
+							UpgradeType: "CONNECT",
+						},
+					},
 				},
 			},
 		},

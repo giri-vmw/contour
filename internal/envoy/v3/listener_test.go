@@ -408,6 +408,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
 						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),
 						UseRemoteAddress:          protobuf.Bool(true),
@@ -495,6 +498,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// Enable support for HTTP/1.0 requests that carry
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
+						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
 						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),
@@ -584,6 +590,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// Enable support for HTTP/1.0 requests that carry
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
+						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
 						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{
 							IdleTimeout: protobuf.Duration(90 * time.Second),
@@ -675,6 +684,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
 						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),
 						UseRemoteAddress:          protobuf.Bool(true),
@@ -763,6 +775,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// Enable support for HTTP/1.0 requests that carry
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
+						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
 						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{
 							MaxConnectionDuration: protobuf.Duration(90 * time.Second),
@@ -854,6 +869,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
 						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
+						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),
 						UseRemoteAddress:          protobuf.Bool(true),
@@ -941,6 +959,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// Enable support for HTTP/1.0 requests that carry
 							// a Host: header. See #537.
 							AcceptHttp_10: true,
+						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
 						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),
@@ -1032,6 +1053,9 @@ func TestHTTPConnectionManager(t *testing.T) {
 							// a Host: header. See #537.
 							AcceptHttp_10:      true,
 							AllowChunkedLength: true,
+						},
+						Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+							AllowConnect: true,
 						},
 						CommonHttpProtocolOptions: &envoy_core_v3.HttpProtocolOptions{},
 						AccessLog:                 FileAccessLogEnvoy("/dev/stdout"),

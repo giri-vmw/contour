@@ -373,6 +373,11 @@ func (b *httpConnectionManagerBuilder) Get() *envoy_listener_v3.Filter {
 			AcceptHttp_10:      true,
 			AllowChunkedLength: b.allowChunkedLength,
 		},
+		Http2ProtocolOptions: &envoy_core_v3.Http2ProtocolOptions{
+			// Enable support for HTTP2 CONNECT upgrades. This is needed
+			// to support tunneling websocket connections over HTTP2.
+			AllowConnect: true,
+		},
 		UseRemoteAddress: protobuf.Bool(true),
 		NormalizePath:    protobuf.Bool(true),
 
